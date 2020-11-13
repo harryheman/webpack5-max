@@ -1,6 +1,6 @@
 # Webpack 5 Boilerplate
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) ![David](https://img.shields.io/david/dev/taniarascia/webpack-boilerplate)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Sensible Webpack 5 boilerplate using Babel, PostCSS and Sass with a hot dev server and an optimized production build.
 
@@ -9,8 +9,8 @@ Sensible Webpack 5 boilerplate using Babel, PostCSS and Sass with a hot dev serv
 ## Installation / Установка
 
 ```
-git clone git@github.com:taniarascia/webpack-boilerplate
-cd webpack-boilerplate
+git clone https://github.com/harryheman/Webpack5-Boilerplate.git
+cd Webpack5-Boilerplate
 npm i / yarn
 ```
 
