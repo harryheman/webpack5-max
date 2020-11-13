@@ -1,0 +1,1 @@
+export default `Sensible Webpack 5 Boilerplate using Babel and PostCSS with a hot dev server and an optimized production build. <br> Масштабируемый шаблон настроек Webpack 5, включающий Babel и PostCSS, сервер для разработки и оптимизированную сборку для продакшна.`
