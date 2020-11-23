@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Sensible Webpack 5 boilerplate using Babel, PostCSS and Sass with a hot dev server and an optimized production build.
+Scalable Webpack 5 boilerplate with Babel, PostCSS, Sass, development server and an optimized production build.
 
 Масштабируемый шаблон настроек Webpack 5, включающий Babel и PostCSS, сервер для разработки и оптимизированную сборку для продакшна.
 
