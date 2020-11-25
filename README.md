@@ -56,4 +56,4 @@ cd dist && http-server
 
 This project is open source and available under the [MIT License](LICENSE).
 
-Проект является открытым и доступен под [MIT License](LICENSE).
+Проект является открытым и доступен под [лицензией MIT](LICENSE).
