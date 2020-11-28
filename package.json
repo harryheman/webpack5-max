@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Sensible webpack 5 boilerplate using Babel and PostCSS with a hot dev server and an optimized production build.",
   "main": "index.js",
-  "author": "Tania Rascia",
+  "author": "Igor Agapov",
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:taniarascia/webpack-boilerplate"
+    "url": "https://github.com/harryheman/Webpack5-Boilerplate"
   },
   "dependencies": {}
 }
