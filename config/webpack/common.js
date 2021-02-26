@@ -100,10 +100,10 @@ module.exports = {
         author: 'Igor Agapov',
         publishedDate: '2021-02-27',
         description:
-          'Webpack 5 Boilerplate for JavaScript, React & TypeScript projects',
+          'Full Webpack 5 Boilerplate for JavaScript, React & TypeScript projects',
         keywords:
           'webpack, webpack5, boilerplate, template, max, config, bundler, bundle, javascript, react, reactjs, react.js, typescript, project, app',
-        title: 'Webpack/React/TypeScript',
+        title: 'Webpack5 Max',
         url: 'https://example.com'
       }
     }),
