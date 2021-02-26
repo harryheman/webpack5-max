@@ -1,0 +1,10 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "sameorigin"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = "frame-ancestors 'self'"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin"
+    Permissions-Policy = "camera=(), geolocation=(), microphone=()"
+    Cache-Control = "max-age=31536000"

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  itemscope
+  itemtype="https://schema.org/WebPage"
+  prefix="og:http://ogp.me/ns#"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title><%= title %></title>
+
+    <link rel="canonical" href="<%= url %>" />
+    <link rel=icon type=image/png href=./icons/128.png /> <link rel=manifest
+    href=./manifest.json />
+
+    <meta name="application-name" content="<%= title %>" />
+    <meta name="author" content="<%= author %>" />
+    <meta name="description" content="<%= description %>" />
+    <meta name="keywords" content="<%= keywords %>" />
+    <meta name="referrer" content="strict-origin" />
+
+    <meta itemprop="name" content="<%= title %>" />
+    <meta itemprop="description" content="<%= description %>" />
+    <meta itemprop="image" content="./icons/128.png" />
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="msapplication-starturl" content="/" />
+    <meta name="msapplication-tooltip" content="<%= description %>" />
+    <meta name="msapplication-TileColor" content="#f0f0f0" />
+    <meta name="msapplication-config" content="browserconfig.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= url %>" />
+    <meta property="og:title" content="<%= title %>" />
+    <meta property="og:description" content="<%= description %>" />
+    <meta property="og:image" content="./icons/512.png" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="app" />
+    <meta name="twitter:title" content="<%= title %>" />
+    <meta name="twitter:description" content="<%= description %>" />
+    <meta name="twitter:url" content="<%= url %>" />
+    <meta name="twitter:image" content="./icons/512.png" />
+
+    <meta name="apple-mobile-web-app-title" content="<%= title %>" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#333" />
+    <link rel="apple-touch-icon" href="./icons/512.png" />
+
+    <meta name="theme-color" content="#f0f0f0" />
+    <meta name="color-scheme" content="light" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=<%= analytics %>"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', '<%= analytics %>')
+    </script>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Webpage",
+        "url": "<%= url %>",
+        "name": "<%= title %>",
+        "headline": "<%= title %>",
+        "description": "<%= description %>",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "<%= url %>"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "<%= author %>"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "./icons/logo.png",
+          "width": 1024,
+          "height": 512
+        },
+        "datePublished": "<%= publishedDate %>",
+        "keywords": "<%= keywords %>"
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>Enable JavaScript, please</noscript>
+    <div id="root"></div>
+  </body>
+</html>

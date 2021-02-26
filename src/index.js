@@ -1,22 +1,25 @@
-// Import of a JavaScript module
-// Импорт модуля JavaScript
-import example from './js/example'
+import React, { StrictMode } from 'react'
+import { render } from 'react-dom'
+// components
+import { App } from './App'
+// styles
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-// Import of a SVG
-// Импорт SVG
-import webpackLogo from './images/webpack-logo.svg'
+console.log(process.env.SECRET)
 
-// Import of styles
-// Импорт стилей
-import './styles/index.scss'
+import logo from './assets/logo.png'
 
-// Appending to the DOM
-// Добавление в DOM
-const logo = document.createElement('img')
-logo.src = webpackLogo
+const imgStyles = {
+  width: '100px',
+  display: 'block',
+  margin: '0.5rem auto 0'
+}
 
-const section = document.createElement('section')
-section.innerHTML = example
-
-const app = document.querySelector('#root')
-app.append(logo, section)
+const rootEl = document.getElementById('root')
+render(
+  <StrictMode>
+    <img src={logo} alt='#' style={imgStyles} />
+    <App />
+  </StrictMode>,
+  rootEl
+)

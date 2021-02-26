@@ -1,59 +1,140 @@
-# Webpack 5 Boilerplate
+# Webpack 5 Max (JS/React/TS)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Scalable Webpack 5 boilerplate with Babel, PostCSS, Sass, development server and an optimized production build.
+![logo](./public/assets/icons/logo.png)
 
-Масштабируемый шаблон настроек Webpack 5, включающий Babel и PostCSS, сервер для разработки и оптимизированную сборку для продакшна.
 
-## Installation / Установка
+### :zap: `Full Webpack 5 Boilerplate for JS/React/TS apps.`
 
-```
-git clone https://github.com/harryheman/Webpack5-Boilerplate.git
-cd Webpack5-Boilerplate
-npm i / yarn
-```
+:link: [Demo on CodeSandbox](https://codesandbox.io/s/webpack5-max-jsreactts-j2o2u)
 
-## Usage / Использование
+---
+## Includes
 
-### Development server / Сервер для разработки
+- 5 config files with all possible settings
+  - common
+  - common + development
+  - common + production
+  - common + production + pwa
+  - common + production + analyze
+- React Todo App example
+  - actions: add, complete, remove, edit, update
+  - filters: all, active, completed
+  - controls: mark all todos as completed, clear all completed todos
+  - state management: useContext/useReducer
+  - styling - react-bootstrap
+  - type checking - prop-types
+- HTML template with all meta & link tags for SEO
+  - don't forget to change values in HtmlWebpackPlugin templateParameters object
+- browserconfig.xml, robots.txt, sitemap.xml
+- service-worker & manifest.json
+  - don't forget to change values in manifest.json
+- netlify.toml with all security headers
+---
+You can easily add settings for Vue or Angular components.
 
-```bash
-npm start / yarn start
-```
+*Vue*
 
-You can view the development server at `localhost:8080`.
-
-Сервер запускается по адресу `localhost:8080`
-
-### Production build / Сборка для продакшна
-
-```bash
-npm run build / yarn build
-```
-
-> Note: Install [http-server](https://www.npmjs.com/package/http-server) globally to deploy a simple server.
-
-> Примечание: установите [http-server](https://www.npmjs.com/package/http-server) глобально для запуска простого сервера.
-
-```bash
-npm i -g http-server / yarn global add http-server
-```
-
-You can view the deploy by creating a server in `dist`.
-
-Вы можете увидеть результат сборки, создав сервер в `dist`
+- install deps
 
 ```bash
-cd dist && http-server
+yarn add -D vue-loader vue-template-compiler
+# or
+npm i -D yarn vue-loader vue-template-compiler
 ```
 
-## Author / Автор
+- add following to config/webpack/common.js
 
-- [Igor Agapov](https://javascript-practice.ru)
+```js
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
-## License / Лицензия
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }
+    ]
+  },
+  plugins: [
+    new VueLoaderPlugin()
+  ]
+}
+```
 
-This project is open source and available under the [MIT License](LICENSE).
+*Angular*
 
-Проект является открытым и доступен под [лицензией MIT](LICENSE).
+- install dep
+
+```bash
+yarn add -D angular2-template-loader
+# or
+npm i -D angular2-template-loader
+```
+
+- change following in config/webpack/common.js
+
+```js
+{
+  test: /.tsx?$/i,
+  exclude: /node_modules/,
+  use: [babelLoader, 'ts-loader', 'angular2-template-loader?keepUrl=true']
+},
+```
+---
+## Installation
+
+```bash
+# clone repo
+git clone https://github.com/harryheman/Webpack5-Max.git
+
+# install deps
+yarn
+# or
+npm i
+```
+---
+## Usage
+
+### Development Server
+
+```bash
+yarn start
+# or
+npm start
+```
+
+### Production Bundle
+
+```bash
+yarn build
+# or
+npm run build
+```
+
+### Production Bundle PWA
+
+```bash
+yarn pwa
+# or
+npm run pwa
+```
+
+### Production Bundle Analyzer
+
+```bash
+yarn analyze
+# or
+npm run analyze
+```
+---
+## Author
+
+[Igor Agapov](https://github.com/harryheman)
+
+---
+## License
+
+This project is open source and available under the [MIT License](LICENSE)
