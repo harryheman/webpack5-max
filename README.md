@@ -4,7 +4,6 @@
 
 ![logo](./public/assets/icons/logo.png)
 
-
 ### :zap: `Full Webpack 5 Boilerplate for JS/React/TS apps.`
 
 :link: [Demo on CodeSandbox](https://codesandbox.io/s/webpack5-max-jsreactts-j2o2u)
