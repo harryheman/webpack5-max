@@ -9,6 +9,7 @@
 :link: [Demo on CodeSandbox](https://codesandbox.io/s/webpack5-max-jsreactts-j2o2u)
 
 ---
+
 ## Includes
 
 - 5 config files with all possible settings
@@ -82,7 +83,9 @@ npm i -D angular2-template-loader
   use: [babelLoader, 'ts-loader', 'angular2-template-loader?keepUrl=true']
 },
 ```
+
 ---
+
 ## Installation
 
 ```bash
@@ -94,7 +97,9 @@ yarn
 # or
 npm i
 ```
+
 ---
+
 ## Usage
 
 ### Development Server
